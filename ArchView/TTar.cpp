@@ -38,7 +38,8 @@ AnalyzeFileHead(TAR_FILE_HEAD& head)
 	//bivayut nenujnie 0x00('\0') 0x20(' ') 0x30 ('0')
 	char StrSize1[12] = {NULL};
 	BOOL BeginNumber = FALSE;
-	for(int i=0, j=0; i<11; i++)	//berem do 11 t.k. 12 simvol vsegda razdelitel'
+	int j = 0;
+	for(int i=0; i<11; i++)	//berem do 11 t.k. 12 simvol vsegda razdelitel'
 	{
 		if (head.size[i] == 0x00)	//'\0'
 			continue;

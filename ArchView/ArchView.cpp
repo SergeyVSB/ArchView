@@ -3,7 +3,6 @@
 /////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
-#include "resource.h"
 #include "ArchView.h"
 #include "ListPlugin.h"
 #include "StructType.h"
@@ -46,9 +45,9 @@ int AddToGenDetectString(char* GenDetectString, const char* StringExt)
 	char  t_ext[MAX_LOADSTRING] = {NULL};
 	char  b_ext[] = "EXT=\"";
 	char  e_ext[] = "\"|";
-	char* offset  = 0;
 	
-	offset = strchr(StringExt, ' ');
+	
+	auto offset = strchr(StringExt, ' ');
 	//videlim ocherednoe rasshirenie (tut rekursiya)
 	if (offset)
 	{
@@ -1847,8 +1846,8 @@ HWND __stdcall ListLoad(HWND ParentWin,char* FileToLoad,int ShowFlags)
 		char pMyLogFile [MAX_PATH] = {NULL};
 		strcpy(pTargetFile, FileToLoad);
 		strcpy(pMyLogFile,  gp->pLogFile);
-		strlwr(pTargetFile);
-		strlwr(pMyLogFile);
+		_strlwr(pTargetFile);
+		_strlwr(pMyLogFile);
 		if (strcmp(pTargetFile, pMyLogFile) == 0)
 		{
 			gp->ClearGlobalParametr();
@@ -2263,126 +2262,126 @@ void __stdcall ListGetDetectString(char* DetectString, int maxlen)
 				if (fINI.ReadKey(SectArchives, "Ace",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtAce",       "ace",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//ARC/PAK
 				if (fINI.ReadKey(SectArchives, "ArcPak",    1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtArcPak",    "arc pak",  BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//ARJ
 				if (fINI.ReadKey(SectArchives, "Arj",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtArj",       "arj",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//BH
 				if (fINI.ReadKey(SectArchives, "Bh",        1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtBh",        "bh",       BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//BZIP2/TBZ2
 				if (fINI.ReadKey(SectArchives, "BZip2Tbz2", 1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtBZip2Tbz2", "bz2 tbz2", BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//CAB
 				if (fINI.ReadKey(SectArchives, "Cab",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtCab",       "cab",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//CPIO
 				if (fINI.ReadKey(SectArchives, "Cpio",      1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtCpio",      "cpio",     BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//DWC
 				if (fINI.ReadKey(SectArchives, "Dwc",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtDwc",       "dwc",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//GZIP/TGZ
 				if (fINI.ReadKey(SectArchives, "GZipTgz",   1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtGZipTgz",   "gz tgz",   BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//HA
 				if (fINI.ReadKey(SectArchives, "Ha",        1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtHa",        "ha",       BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//LHA/LZH
 				if (fINI.ReadKey(SectArchives, "LhaLzh",    1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtLhaLzh",    "lha lzh",  BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//PPM
 				if (fINI.ReadKey(SectArchives, "Ppm",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtPpm",       "ppm",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//RAR
 				if (fINI.ReadKey(SectArchives, "Rar",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtRar",       "rar",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//SQZ
 				if (fINI.ReadKey(SectArchives, "Sqz",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtSqz",       "sqz",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//TAR
 				if (fINI.ReadKey(SectArchives, "Tar",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtTar",       "tar",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//Z
 				if (fINI.ReadKey(SectArchives, "Z",         1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtZ",         "z",        BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//ZIP/JAR
 				if (fINI.ReadKey(SectArchives, "ZipJar",    1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtZipJar",    "zip jar",  BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//ZOO
 				if (fINI.ReadKey(SectArchives, "Zoo",       1))
 				{
 					fINI.ReadKey(SectExtensions, "ExtZoo",       "zoo",      BufStr, MAX_LOADSTRING);
-					strupr(BufStr);
+					_strupr(BufStr);
 					AddToGenDetectString(GenDetectString, BufStr);
 				}
 				//rasshireniya wcx-plugins
@@ -2391,7 +2390,7 @@ void __stdcall ListGetDetectString(char* DetectString, int maxlen)
 				{
 					if (Node->Value)
 					{
-						strupr(Node->Value);
+						_strupr(Node->Value);
 						AddToGenDetectString(GenDetectString, Node->Value);
 					}
 					Node = Node->Next;

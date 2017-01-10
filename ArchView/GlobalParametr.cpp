@@ -3,7 +3,6 @@
 /////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
-#include "resource.h"
 #include "ArchView.h"
 #include "GlobalParametr.h"
 

@@ -548,7 +548,7 @@ TArchive* MyTestFile::TestArchive(MySettings* pSettings, MyLanguage* pLanguage, 
 	if (offset)
 	{
 		sprintf(EXT, " %s ", offset+1);
-		strlwr (EXT);
+		_strlwr (EXT);
 	}
 
 	//opredlit' arhiv po rasshireniyu
@@ -564,84 +564,84 @@ TArchive* MyTestFile::TestArchive(MySettings* pSettings, MyLanguage* pLanguage, 
 			case T_ACE:
 				m_dfa.pUnArchiveDll = m_pSettings->sSettingsLibraries.Ace;	//DLL dlya dannogo tipa arhiva (chitat' kommentariy)
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtAce);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestAce()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_ARC_PAK:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtArcPak);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestArcPak()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_ARJ:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtArj);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestArj()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_BH:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtBh);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestBh()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_BZIP2_TBZ2:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtBZip2Tbz2);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestBZip2Tbz2()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_CAB:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtCab);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestCab()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_CPIO:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtCpio);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestCpio()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_DWC:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtDwc);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestDwc()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_GZIP_TGZ:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtGZipTgz);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestGZipTgz()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_HA:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtHa);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestHa()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_LHA_LZH:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtLhaLzh);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestLhaLzh()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_PPM:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtPpm);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestPpm()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
@@ -649,42 +649,42 @@ TArchive* MyTestFile::TestArchive(MySettings* pSettings, MyLanguage* pLanguage, 
 			case T_RAR:
 				m_dfa.pUnArchiveDll = m_pSettings->sSettingsLibraries.Rar;	//DLL dlya dannogo tipa arhiva (chitat' kommentariy)
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtRar);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestRar()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_SQZ:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtSqz);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestSqz()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_TAR:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtTar);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestTar()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_Z:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtZ);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestZ()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_ZIP_JAR:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtZipJar);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestZipJar()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
 				break;
 			case T_ZOO:
 				sprintf(ARCHEXT, " %s ", sSettingsExtensions.ExtZoo);
-				strlwr (ARCHEXT);
+				_strlwr (ARCHEXT);
 				if (strstr(ARCHEXT, EXT))
 					if (TestZoo()) return m_pArchData;
 					else goto _T_LABEL_END_EXT;
@@ -709,7 +709,7 @@ TArchive* MyTestFile::TestArchive(MySettings* pSettings, MyLanguage* pLanguage, 
 				{
 					m_dfa.pUnArchiveDll = NodeWCXPluginsTC->Value;	//DLL dlya dannogo plagina
 					sprintf(ARCHEXT, " %s ", NodeWCXExtensions->Value);
-					strlwr (ARCHEXT);
+					_strlwr (ARCHEXT);
 					if (strstr(ARCHEXT, EXT))
 						if (TestWcxPluginTC(NodeWCXPluginsTC->Name)) return m_pArchData;
 						else m_dfa.pUnArchiveDll = 0;	//DLL dlya dannogo plagina
